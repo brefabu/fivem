@@ -1,16 +1,14 @@
-Proxy = {
-    storage = {}
-};
+storage = {};
 
 function add(identifier, package)
     Citizen.CreateThread(function()
-        Proxy.storage[_iname] = _idata;
+        storage[identifier] = package;
     end);
 end;
 
-function get(_iname, _callback)
+function get(identifier, callback)
     Citizen.CreateThread(function()
-        _callback(Proxy.storage[_iname]);
+        callback(storage[identifier]);
     end);
 end;
 
