@@ -11,6 +11,7 @@ class Music {
 
     toggle(state) {
         if ( state === "play" ) {
+            this.sound.volume = 0.5;
             this.sound.play();
         }
         if ( state === "pause" ) {

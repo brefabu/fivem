@@ -20,9 +20,9 @@ function handleMove(e) {
     * On mouseover
     */
   /* Store the x position */
-  const xVal = e.layerX
+  const xVal = e.pageX
   /* Store the y position */
-  const yVal = e.layerY
+  const yVal = e.pageY
   
   /*
     * Calculate rotation valuee along the Y-axis
@@ -46,3 +46,10 @@ function handleMove(e) {
 el.addEventListener('mouseout', function() {
   el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
 })
+
+$(document).on('mousemove', function(e){
+  $('#cursor').css({
+     left:  e.pageX,
+     top:   e.pageY
+  });
+});

@@ -9,7 +9,10 @@ version "1.0"
 files {
     'music/*',
     'scss/*',
-    '*'
+    'config.js',
+    'music.js',
+    'tilt.js',
+    'index.html'
 }
 
 loadscreen 'index.html'
